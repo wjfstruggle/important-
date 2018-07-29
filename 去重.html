@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var arr = [12,12,15,45,45,56,23,16]
+		var arr2 = []
+		function de_weight(arr) {
+			for (var i = 0; i < arr.length; i++) {
+				if (arr2.indexOf(arr[i]) < 0) {
+					arr2.push(arr[i])
+				}
+			}
+			return arr2
+		}
+		
+		console.log(de_weight(arr))
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		function F() {
+			function makeClose(x) {
+			return function() {
+				return x
+			}
+		}
+		var a= [];
+			for (var i = 0;i < 4; i++) {
+				a[i] =  makeClose(i)
+			}
+			return a
+		}
+		var a = F();
+		alert(a[0]())
+		alert(a[1]())
+		alert(a[2]())
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var result = [];
+		function sort(elements) {
+			for (let i = 0; i < elements.length - 1; i ++) {
+				for (let j = 0; j < elements.length - i - 1; j++) {
+					if (elements[j] > elements[j + 1]) {
+						result = elements[j];
+						elements[j] = elements[j + 1];
+						elements[j + 1] = result
+					}
+				}
+			}
+			return result
+		}
+		var elements = [12,5,4,6,45,32,45,24,16,18,15];
+		console.log('排序前:' + elements)
+		sort(elements)
+		console.log('排序后:' + elements)
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Easy slides</title>
+
+  <script> 
+  var imgArr=new Array("1.jpeg","2.jpeg","3.jpeg","4.jpeg");
+  var index=0;
+  var cycle_b=false;
+  //展示上一张图片
+  function previous(){
+  index--;
+  if(index<0)
+  index=imgArr.length-1;
+  document.getElementById("img").src=imgArr[index]; 
+  }
+
+  //展示下一张图片
+  function next(){
+  index++;
+  if(index==imgArr.length)
+  index=0;
+  document.getElementById("img").src=imgArr[index]; 
+
+  }
+
+  //循环播放，每三秒播放一张
+  function cycle(){
+  if(cycle_b){
+  cycle_b=false;
+  window.clearInterval(i);
+  document.getElementById("body").bgColor="cornflowerblue";
+  document.getElementById("btn1").type="button"//停止时显示按钮
+  document.getElementById("btn2").type="button"
+  }else{
+  cycle_b=true;
+  i=window.setInterval("next()",1500); //获取setInterval的返回值 ，用于停止
+  document.getElementById("body").bgColor="black";
+  document.getElementById("btn1").type="hidden" //循环时隐藏按钮
+  document.getElementById("btn2").type="hidden"
+  }
+  }
+
+  </script>
+</head>
+<body id="body" align="center" bgcolor="cornflowerblue">
+<br/><br/>
+<br/><br/>
+<img id="img" src="1.jpg" width="600" height="500"  onclick="cycle()"/><br/><br/>
+<p> 点击图片自动播放，再次点击取消自动播放</p>
+<input id="btn1" type="button" style="width: 100px; "  value="<" onclick="previous()"/>
+<input id="btn2" type="button" style="width: 100px;"  value=">" onclick="next()"/>
+</body>
+</html>

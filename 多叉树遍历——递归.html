@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>多叉树遍历</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+	var cityData = [
+      {
+        id: 1,
+        name: '广东省',
+        children: [
+          {
+            id: 11,
+            name: '深圳',
+            children: [
+              {
+                id: 111,
+                name: '宝安',
+                children: [
+                  {
+                    id: 1111,
+                    name: '西乡',
+                    children:[
+                      {
+                        id: 11111,
+                        name: '坪洲',
+                        children:[]
+                      },
+                      {
+                        id: 11112,
+                        name: '灵芝',
+                        children:[]
+                      }
+                    ]
+                  },
+                  {
+                    id: 1112,
+                    name: '南山',
+                    children:[
+                      {
+                        id: 11121,
+                        name: '科技园',
+                        children:[]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                id: 112,
+                name: '福田',
+                children: []
+              }
+            ]
+          },
+          {
+            id: 12,
+            name: '广州',
+            children: [
+              {
+                id: 122,
+                name: '白云区',
+                children: [
+                  {
+                    id: 1222,
+                    name: '白云区',
+                    children: []
+                  }
+                ]
+              },
+              {
+                id: 122,
+                name: '珠海区',
+                children: []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: '湖南省',
+        children: []
+      }
+    ];
+    // 递归
+    let temp = ''
+    function result(cityData, id) {
+    	if (!cityData && !cityData.length) {
+    		return ''
+    	}
+    	for (let i = 0; i < cityData.length; i++) {
+    		const childs = cityData[i].children;
+    		if (cityData[i].id === id) {
+    			temp = cityData[i].name;
+    		}
+
+    		if (childs && childs.length > 0) {
+    		result(childs, id)
+    		}
+
+    	}
+    	
+    	return temp;
+    }
+    const ret = result(cityData, 122);
+    alert(ret);
+	</script>
+</body>
+</html>

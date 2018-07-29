@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css实现幻灯片</title>
+	<style type="text/css">
+	.huanDengPic {
+		width: 600px;
+		height: 600px;
+		margin: 50px auto;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		-webkit-animation: slider 5s infinite; /*infinite无限循环*/
+	}
+	@-webkit-keyframes slider{
+		0% {
+                background: url(http://t1.mmonly.cc/uploads/tu/zyf/tt/20160520/kewnk2ermbe.jpg) no-repeat;
+            }
+
+        25% {
+            background: url(http://t1.mmonly.cc/uploads/tu/zyf/tt/20160520/j0qoejfukbu.jpg) no-repeat;
+        }
+
+        75% {
+            background: url(http://t1.mmonly.cc/uploads/tu/zyf/tt/20160520/oajlgqc2nud.jpg) no-repeat;
+        }
+        100% {
+            background: url(http://www.gdzp.org/uploadfile/2014/0905/20140905052820850.jpg) no-repeat;
+        }
+	}
+	</style>
+</head>
+<body>	
+	<div class="huanDengPic">
+		
+	</div>
+</body>
+</html>

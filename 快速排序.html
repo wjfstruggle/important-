@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		// 快速排序是对冒泡排序的一种改进
+		// 第一趟排序时将数据分成两部分，一部分比另一部分的所有数据都要小。然后递归调用，在两边都实行快速排序。本质上来看，快速排序应该算是在冒泡排序基础上的递归分治法。
+		function quickSort(elements) {
+			if (elements.length <= 1) {
+				return elements;
+			}
+			// 数据分成两部分
+			let arrIndex = Math.floor(elements.length / 2)
+			let arr = elements.splice(arrIndex, 1)[0]
+			let left = []
+			let right = []
+			for (let i = 0; i < elements.length; i++) {
+				if (elements[i] < arr) {
+					left.push(elements[i])
+				} else {
+					right.push(elements[i])
+				}
+			}
+			return quickSort(left).concat([arr], quickSort(right))
+		};
+		const elements = [12,5,4,6,45,32,45,24,16,18,15];
+		console.log(quickSort(elements))
+	</script>
+</body>
+</html>
