@@ -51,7 +51,7 @@ JavaScriptÃ¿¸ö¶ÔÏó¶¼ÓĞÒ»¸öprototypeÊôĞÔ£¬³ÆÖ®ÎªÔ­ĞÍ¡£Ô­ĞÍµÄÖµÊÇÒ»¸ö¶ÔÏó£¬¶øÕâĞ©¶
 			this.age = age;
 		}
 		Parent.prototype.Child = function() {
-				alert(this.name + this.age)
+			alert(this.name + this.age)
 		}
 
 		var obj = new Parent('zhangsan', 10)
@@ -108,7 +108,10 @@ function stopBubble(e)
 }
 return false
 ---------------------------------------------------------
-jsonp¿çÓò
+jsonp¿çÓò£º
+Ö»ÒªĞ­Òé¡¢ÓòÃû¡¢¶Ë¿ÚÓĞÈÎºÎÒ»¸ö²»Í¬£¬¶¼±»µ±×÷ÊÇ²»Í¬µÄÓò¡£
+Í¨¹ıscript±êÇ©ÒıÈëÒ»¸öjsÎÄ¼ş£¬Õâ¸öjsÎÄ¼şÔØÈë³É¹¦ºó»áÖ´ĞĞÎÒÃÇÔÚurl²ÎÊıÖĞÖ¸¶¨µÄº¯Êı£¬²¢ÇÒ»á°ÑÎÒÃÇĞèÒªµÄjsonÊı¾İ×÷Îª²ÎÊı´«Èë¡£ËùÒÔjsonpÊÇĞèÒª·şÎñÆ÷¶ËµÄÒ³Ãæ½øĞĞÏàÓ¦µÄÅäºÏµÄ¡£
+---------------------------------------------------------
 ±¾µØ´æ´¢
 ---------------------------------------------------------
 È¥ÖØ
@@ -187,3 +190,282 @@ HTTP 1.0¹æ¶¨ä¯ÀÀÆ÷Óë·şÎñÆ÷Ö»±£³Ö¶ÌÔİµÄÁ¬½Ó£¬ä¯ÀÀÆ÷µÄÃ¿´ÎÇëÇó¶¼ĞèÒªÓë·şÎñÆ÷½¨Á¢Ò»
 4¡¢HTTP/1.1ÖĞÒıÈëÁËChunked transfer-codingÀ´½â¾öÉÏÃæÕâ¸öÎÊÌâ
 5¡¢HTTP/1.1ÔÚ1.0µÄ»ù´¡ÉÏ¼ÓÈëÁËÒ»Ğ©cacheµÄĞÂÌØĞÔ£¬µ±»º´æ¶ÔÏóµÄAge³¬¹ıExpireÊ±±äÎªstale¶ÔÏó£¬
 cache²»ĞèÒªÖ±½ÓÅ×Æústale¶ÔÏó£¬¶øÊÇÓëÔ´·şÎñÆ÷½øĞĞÖØĞÂ¼¤»î£¨revalidation£©¡£
+-------------------------------------------------------------------------
+ES6ºÍES7ÓĞÄÄĞ©ĞÂÌØĞÔ£º
+let constÉùÃ÷µÄ±äÁ¿
+¿é¼¶×÷ÓÃÓò
+½â¹¹¸³Öµ£º ±äÁ¿ÃûĞèÓëÊôĞÔÍ¬Ãû
+×Ö·û´®µÄÀ©Õ¹£º 
+includes(),startsWith(),endsWith() 
+includes(): ²¼¶ûÖµ¡£ÊÇ·ñ°üº¬¸Ã×Ö·û´®
+srtartsWith():²¼¶ûÖµ¡£ÊÇ·ñÔÚÔ­×Ö·û´®µÄÍ·²¿
+endsWith():²¼¶ûÖµ¡£ÊÇ¶¼ÔÚÔ­×Ö·û´®µÄÎ²²¿
+ES6ºÏ²¢Á½¸öÊı×é£º [...a, ...b]Ê¹ÓÃÀ©Õ¹ÔËËã·û
+¶ÔÏóµÄÀ©Õ¹
+Object.keys() Object.values() Object.entries() 
+Object.keys£¬·µ»ØÒ»¸öÊı×é£¬³ÉÔ±ÊÇ²ÎÊı¶ÔÏó×ÔÉíµÄ£¨²»º¬¼Ì³ĞµÄ£©ËùÓĞ¿É±éÀúÊôĞÔµÄ¼üÃû¡£
+Object.values£¬·µ»ØÒ»¸öÊı×é£¬³ÉÔ±ÊÇ²ÎÊı¶ÔÏó×ÔÉíµÄ£¨²»º¬¼Ì³ĞµÄ£©ËùÓĞ¿É±éÀúÊôĞÔµÄ¼üÖµ¡£
+Object.entries£¬·µ»ØÒ»¸öÊı×é£¬³ÉÔ±ÊÇ²ÎÊı¶ÔÏó×ÔÉíµÄ£¨²»º¬¼Ì³ĞµÄ£©ËùÓĞ¿É±éÀúÊôĞÔµÄ¼üÖµ¶ÔÊı×é¡£
+let {keys, values, entries} = Object;
+let obj = { a: 1, b: 2, c: 3 };
+for (let key of keys(obj)) {
+  console.log(key); // 'a', 'b', 'c'
+}
+for (let value of values(obj)) {
+  console.log(value); // 1, 2, 3
+}
+for (let [key, value] of entries(obj)) {
+  console.log([key, value]); // ['a', 1], ['b', 2], ['c', 3]
+}
+-------------------------------------------------------------------------
+
+webpackµÄ´ò°üÁ÷³Ì
+Ò». °²×°
+
+ÎÒÃÇ³£¹æÖ±½ÓÊ¹ÓÃ npm µÄĞÎÊ½À´°²×°£º
+
+$ npm install webpack -g
+
+µ±È»Èç¹û³£¹æÏîÄ¿»¹ÊÇ°ÑÒÀÀµĞ´Èë package.json °üÈ¥¸üÈËĞÔ»¯£º
+
+$ npm init
+$ npm install webpack --save-dev
+
+ 
+
+¶ş. ÅäÖÃ
+
+Ã¿¸öÏîÄ¿ÏÂ¶¼±ØĞëÅäÖÃÓĞÒ»¸ö webpack.config.js £¬ËüµÄ×÷ÓÃÈçÍ¬³£¹æµÄ gulpfile.js/Gruntfile.js £¬¾ÍÊÇÒ»¸öÅäÖÃÏî£¬¸æËß webpack ËüĞèÒª×öÊ²Ã´¡£
+
+ÎÒÃÇ¿´¿´ÏÂ·½µÄÊ¾Àı£º
+
+var webpack = require('webpack');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+
+module.exports = {
+    //²å¼şÏî
+    plugins: [commonsPlugin],
+    //Ò³ÃæÈë¿ÚÎÄ¼şÅäÖÃ
+    entry: {
+        index : './src/js/page/index.js'
+    },
+    //Èë¿ÚÎÄ¼şÊä³öÅäÖÃ
+    output: {
+        path: 'dist/js/page',
+        filename: '[name].js'
+    },
+    module: {
+        //¼ÓÔØÆ÷ÅäÖÃ
+        loaders: [
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    },
+    //ÆäËü½â¾ö·½°¸ÅäÖÃ
+    resolve: {
+        root: 'E:/github/flux-example/src', //¾ø¶ÔÂ·¾¶
+        extensions: ['', '.js', '.json', '.scss'],
+        alias: {
+            AppStore : 'js/stores/AppStores.js',
+            ActionType : 'js/actions/ActionType.js',
+            AppAction : 'js/actions/AppAction.js'
+        }
+    }
+};
+¢Å plugins ÊÇ²å¼şÏî£¬ÕâÀïÎÒÃÇÊ¹ÓÃÁËÒ»¸ö CommonsChunkPlugin µÄ²å¼ş£¬ËüÓÃÓÚÌáÈ¡¶à¸öÈë¿ÚÎÄ¼şµÄ¹«¹²½Å±¾²¿·Ö£¬È»ºóÉú³ÉÒ»¸ö common.js À´·½±ã¶àÒ³ÃæÖ®¼ä½øĞĞ¸´ÓÃ¡£
+
+¢Æ entry ÊÇÒ³ÃæÈë¿ÚÎÄ¼şÅäÖÃ£¬output ÊÇ¶ÔÓ¦Êä³öÏîÅäÖÃ£¨¼´Èë¿ÚÎÄ¼ş×îÖÕÒªÉú³ÉÊ²Ã´Ãû×ÖµÄÎÄ¼ş¡¢´æ·Åµ½ÄÄÀï£©£¬ÆäÓï·¨´óÖÂÎª£º
+
+{
+    entry: {
+        page1: "./page1",
+        //Ö§³ÖÊı×éĞÎÊ½£¬½«¼ÓÔØÊı×éÖĞµÄËùÓĞÄ£¿é£¬µ«ÒÔ×îºóÒ»¸öÄ£¿é×÷ÎªÊä³ö
+        page2: ["./entry1", "./entry2"]
+    },
+    output: {
+        path: "dist/js/page",
+        filename: "[name].bundle.js"
+    }
+}
+¸Ã¶Î´úÂë×îÖÕ»áÉú³ÉÒ»¸ö page1.bundle.js ºÍ page2.bundle.js£¬²¢´æ·Åµ½ ./dist/js/page ÎÄ¼ş¼ĞÏÂ¡£
+
+¢Ç module.loaders ÊÇ×î¹Ø¼üµÄÒ»¿éÅäÖÃ¡£Ëü¸æÖª webpack Ã¿Ò»ÖÖÎÄ¼ş¶¼ĞèÒªÊ¹ÓÃÊ²Ã´¼ÓÔØÆ÷À´´¦Àí£º
+
+    module: {
+        //¼ÓÔØÆ÷ÅäÖÃ
+        loaders: [
+            //.css ÎÄ¼şÊ¹ÓÃ style-loader ºÍ css-loader À´´¦Àí
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            //.js ÎÄ¼şÊ¹ÓÃ jsx-loader À´±àÒë´¦Àí
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            //.scss ÎÄ¼şÊ¹ÓÃ style-loader¡¢css-loader ºÍ sass-loader À´±àÒë´¦Àí
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            //Í¼Æ¬ÎÄ¼şÊ¹ÓÃ url-loader À´´¦Àí£¬Ğ¡ÓÚ8kbµÄÖ±½Ó×ªÎªbase64
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    }
+ÈçÉÏ£¬"-loader"ÆäÊµÊÇ¿ÉÒÔÊ¡ÂÔ²»Ğ´µÄ£¬¶à¸öloaderÖ®¼äÓÃ¡°!¡±Á¬½ÓÆğÀ´¡£
+
+×¢ÒâËùÓĞµÄ¼ÓÔØÆ÷¶¼ĞèÒªÍ¨¹ı npm À´¼ÓÔØ£¬²¢½¨Òé²éÔÄËüÃÇ¶ÔÓ¦µÄ readme À´¿´¿´ÈçºÎÊ¹ÓÃ¡£
+
+ÄÃ×îºóÒ»¸ö url-loader À´Ëµ£¬Ëü»á½«ÑùÊ½ÖĞÒıÓÃµ½µÄÍ¼Æ¬×ªÎªÄ£¿éÀ´´¦Àí£¬Ê¹ÓÃ¸Ã¼ÓÔØÆ÷ĞèÒªÏÈ½øĞĞ°²×°£º
+
+npm install url-loader -save-dev
+
+ÅäÖÃĞÅÏ¢µÄ²ÎÊı¡°?limit=8192¡±±íÊ¾½«ËùÓĞĞ¡ÓÚ8kbµÄÍ¼Æ¬¶¼×ªÎªbase64ĞÎÊ½£¨ÆäÊµÓ¦¸ÃËµ³¬¹ı8kbµÄ²ÅÊ¹ÓÃ url-loader À´Ó³Éäµ½ÎÄ¼ş£¬·ñÔò×ªÎªdata urlĞÎÊ½£©¡£
+
+¢È ×îºóÊÇ resolve ÅäÖÃ£¬Õâ¿éºÜºÃÀí½â£¬Ö±½ÓĞ´×¢ÊÍÁË£º
+
+    resolve: {
+        //²éÕÒmoduleµÄ»°´ÓÕâÀï¿ªÊ¼²éÕÒ
+        root: 'E:/github/flux-example/src', //¾ø¶ÔÂ·¾¶
+        //×Ô¶¯À©Õ¹ÎÄ¼şºó×ºÃû£¬ÒâÎ¶×ÅÎÒÃÇrequireÄ£¿é¿ÉÒÔÊ¡ÂÔ²»Ğ´ºó×ºÃû
+        extensions: ['', '.js', '.json', '.scss'],
+        //Ä£¿é±ğÃû¶¨Òå£¬·½±ãºóĞøÖ±½ÓÒıÓÃ±ğÃû£¬ÎŞĞë¶àĞ´³¤³¤µÄµØÖ·
+        alias: {
+            AppStore : 'js/stores/AppStores.js',//ºóĞøÖ±½Ó require('AppStore') ¼´¿É
+            ActionType : 'js/actions/ActionType.js',
+            AppAction : 'js/actions/AppAction.js'
+        }
+    }
+¹ØÓÚ webpack.config.js ¸üÏê¾¡µÄÅäÖÃ¿ÉÒÔ²Î¿¼ÕâÀï¡£
+
+
+
+ÔËĞĞ webpack
+
+webpack µÄÖ´ĞĞÒ²ºÜ¼òµ¥£¬Ö±½ÓÖ´ĞĞ
+
+$ webpack --display-error-details
+
+¼´¿É£¬ºóÃæµÄ²ÎÊı¡°--display-error-details¡±ÊÇÍÆ¼ö¼ÓÉÏµÄ£¬·½±ã³ö´íÊ±ÄÜ²éÔÄ¸üÏê¾¡µÄĞÅÏ¢£¨±ÈÈç webpack Ñ°ÕÒÄ£¿éµÄ¹ı³Ì£©£¬´Ó¶ø¸üºÃ¶¨Î»µ½ÎÊÌâ¡£
+
+ÆäËûÖ÷ÒªµÄ²ÎÊıÓĞ£º
+
+$ webpack --config XXX.js   //Ê¹ÓÃÁíÒ»·İÅäÖÃÎÄ¼ş£¨±ÈÈçwebpack.config2.js£©À´´ò°ü
+
+$ webpack --watch   //¼àÌı±ä¶¯²¢×Ô¶¯´ò°ü
+
+$ webpack -p    //Ñ¹Ëõ»ìÏı½Å±¾£¬Õâ¸ö·Ç³£·Ç³£ÖØÒª£¡
+
+$ webpack -d    //Éú³ÉmapÓ³ÉäÎÄ¼ş£¬¸æÖªÄÄĞ©Ä£¿é±»×îÖÕ´ò°üµ½ÄÄÀïÁË
+ÆäÖĞµÄ -p ÊÇºÜÖØÒªµÄ²ÎÊı£¬Ôø¾­Ò»¸öÎ´Ñ¹ËõµÄ 700kb µÄÎÄ¼ş£¬Ñ¹ËõºóÖ±½Ó½µµ½ 180kb£¨Ö÷ÒªÊÇÑùÊ½Õâ¿éÒ»¾ä¾Í¶ÀÕ¼Ò»ĞĞ½Å±¾£¬µ¼ÖÂÎ´Ñ¹Ëõ½Å±¾±äµÃºÜ´ó£©¡£
+
+
+
+Ä£¿éÒıÈë
+
+ÉÏÃæßëà¾ÁËÄÇÃ´¶àÅäÖÃºÍÖ´ĞĞ·½·¨£¬ÏÂÃæ¿ªÊ¼ËµËµÑ°³£Ò³ÃæºÍ½Å±¾ÔõÃ´Ê¹ÓÃßÂ¡£
+
+Ò». HTML
+
+Ö±½ÓÔÚÒ³ÃæÒıÈë webpack ×îÖÕÉú³ÉµÄÒ³Ãæ½Å±¾¼´¿É£¬²»ÓÃÔÙĞ´Ê²Ã´ data-main »ò seajs.use ÁË£º
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>demo</title>
+</head>
+<body>
+  <script src="dist/js/page/common.js"></script>
+  <script src="dist/js/page/index.js"></script>
+</body>
+</html>
+¿ÉÒÔ¿´µ½ÎÒÃÇÁ¬ÑùÊ½¶¼²»ÓÃÒıÈë£¬±Ï¾¹½Å±¾Ö´ĞĞÊ±»á¶¯Ì¬Éú³É<style>²¢±êÇ©´òµ½headÀï¡£
+
+¶ş. JS
+
+¸÷½Å±¾Ä£¿é¿ÉÒÔÖ±½ÓÊ¹ÓÃ commonJS À´ÊéĞ´£¬²¢¿ÉÒÔÖ±½ÓÒıÈëÎ´¾­±àÒëµÄÄ£¿é£¬±ÈÈç JSX¡¢sass¡¢coffeeµÈ£¨Ö»ÒªÄãÔÚ webpack.config.js ÀïÅäÖÃºÃÁË¶ÔÓ¦µÄ¼ÓÔØÆ÷£©¡£
+
+ÎÒÃÇÔÙ¿´¿´±àÒëÇ°µÄÒ³ÃæÈë¿ÚÎÄ¼ş£¨index.js£©£º
+
+require('../../css/reset.scss'); //¼ÓÔØ³õÊ¼»¯ÑùÊ½
+require('../../css/allComponent.scss'); //¼ÓÔØ×é¼şÑùÊ½
+var React = require('react');
+var AppWrap = require('../component/AppWrap'); //¼ÓÔØ×é¼ş
+var createRedux = require('redux').createRedux;
+var Provider = require('redux/react').Provider;
+var stores = require('AppStore');
+
+var redux = createRedux(stores);
+
+var App = React.createClass({
+    render: function() {
+        return (
+            <Provider redux={redux}>
+                {function() { return <AppWrap />; }}
+            </Provider>
+        );
+    }
+});
+
+React.render(
+    <App />, document.body
+);
+Ò»ÇĞ¾ÍÊÇÕâÃ´¼òµ¥Ã´Ã´ßÕ~ ºóĞø¸÷ÖÖÓĞµÄÃ»µÄ£¬webpack ¶¼»á°ïÄã½øĞĞ´¦Àí¡£
+
+
+
+ÆäËû
+
+ÖÁ´ËÎÒÃÇÒÑ¾­»ù±¾ÉÏÊÖÁË webpack µÄÊ¹ÓÃ£¬ÏÂÃæÊÇ²¹³äÒ»Ğ©ÓĞÓÃµÄ¼¼ÇÉ¡£
+
+Ò». shimming
+
+ÔÚ AMD/CMD ÖĞ£¬ÎÒÃÇĞèÒª¶Ô²»·ûºÏ¹æ·¶µÄÄ£¿é£¨±ÈÈçÒ»Ğ©Ö±½Ó·µ»ØÈ«¾Ö±äÁ¿µÄ²å¼ş£©½øĞĞ shim ´¦Àí£¬ÕâÊ±ºòÎÒÃÇĞèÒªÊ¹ÓÃ exports-loader À´°ïÃ¦£º
+
+{ test: require.resolve("./src/js/tool/swipe.js"),  loader: "exports?swipe"}
+Ö®ºóÔÚ½Å±¾ÖĞĞèÒªÒıÓÃ¸ÃÄ£¿éµÄÊ±ºò£¬ÕâÃ´¼òµ¥µØÀ´Ê¹ÓÃ¾Í¿ÉÒÔÁË£º
+
+require('./tool/swipe.js');
+swipe(); 
+
+
+¶ş. ×Ô¶¨Òå¹«¹²Ä£¿éÌáÈ¡
+
+ÔÚÎÄÕÂ¿ªÊ¼ÎÒÃÇÊ¹ÓÃÁË CommonsChunkPlugin ²å¼şÀ´ÌáÈ¡¶à¸öÒ³ÃæÖ®¼äµÄ¹«¹²Ä£¿é£¬²¢½«¸ÃÄ£¿é´ò°üÎª common.js ¡£
+
+µ«ÓĞÊ±ºòÎÒÃÇÏ£ÍûÄÜ¸ü¼Ó¸öĞÔ»¯Ò»Ğ©£¬ÎÒÃÇ¿ÉÒÔÕâÑùÅäÖÃ£º
+
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+module.exports = {
+    entry: {
+        p1: "./page1",
+        p2: "./page2",
+        p3: "./page3",
+        ap1: "./admin/page1",
+        ap2: "./admin/page2"
+    },
+    output: {
+        filename: "[name].js"
+    },
+    plugins: [
+        new CommonsChunkPlugin("admin-commons.js", ["ap1", "ap2"]),
+        new CommonsChunkPlugin("commons.js", ["p1", "p2", "admin-commons.js"])
+    ]
+};
+// <script>s required:
+// page1.html: commons.js, p1.js
+// page2.html: commons.js, p2.js
+// page3.html: p3.js
+// admin-page1.html: commons.js, admin-commons.js, ap1.js
+// admin-page2.html: commons.js, admin-commons.js, ap2.js
+
+
+Èı. ¶ÀÁ¢´ò°üÑùÊ½ÎÄ¼ş
+
+ÓĞÊ±ºò¿ÉÄÜÏ£ÍûÏîÄ¿µÄÑùÊ½ÄÜ²»Òª±»´ò°üµ½½Å±¾ÖĞ£¬¶øÊÇ¶ÀÁ¢³öÀ´×÷Îª.css£¬È»ºóÔÚÒ³ÃæÖĞÒÔ<link>±êÇ©ÒıÈë¡£ÕâÊ±ºòÎÒÃÇĞèÒª extract-text-webpack-plugin À´°ïÃ¦£º
+
+    var webpack = require('webpack');
+    var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+    var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+    module.exports = {
+        plugins: [commonsPlugin, new ExtractTextPlugin("[name].css")],
+        entry: {
+        //...Ê¡ÂÔÆäËüÅäÖÃ
+
+-------------------------------------------------------------------------
