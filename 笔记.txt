@@ -218,7 +218,19 @@ for (let [key, value] of entries(obj)) {
   console.log([key, value]); // ['a', 1], ['b', 2], ['c', 3]
 }
 -------------------------------------------------------------------------
+NodeJS开发中常用的一些模块。
 
+MVC框架 - Express
+Rest开发 - Restify
+前端模板 - EJS
+数据库驱动 - Mongoose
+Web Socket - Socket.IO
+日志管理 - Log4js
+HTTP调用 Request
+异步流程控制 - Async
+部署 - forever
+定时任务 - Cron
+-------------------------------------------------------------------------
 webpack的打包流程
 一. 安装
 
