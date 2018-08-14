@@ -594,3 +594,40 @@ CSS3有哪些新特性？
 6)    媒体查询，多栏布局
 
 7)    border-image
+-----------------------------------------------------------------------
+箭头函数和普通函数的区别：
+1、箭头函数是一个匿名函数，不能作为构造函数，不能使用new
+2、只有一条返回语句的时候，可以省略return
+3、箭头函数不绑定this，this指的是上下文，而普通函数this指的是当前对象
+4、箭头函数不绑定arguments，取而代之用rest参数...解决
+5、箭头函数通过 call()  或   apply() 方法调用一个函数时，只传入了一个参数，对 this 并没有影响。
+6、箭头函数没有原型属性
+7、箭头函数不能当做Generator函数,不能使用yield关键字
+-----------------------------------------------------------------------
+vue 中 v-if 和 v-show 的区别
+一、v-if 和 v-show 在页面都展示为显示隐藏，但是它两有这本质的区别。 
+例如：<div v-if=""></div> 
+不同点：
+
+1 . v-if 当值为 true时，显示div ，当值为false时，该元素消失，代码也会消失，相当于将代码删除了，当在为true时，页面会重新渲染div; 
+而v-show 控制的隐藏出现，只是将css属性设为了display：none 或block;
+-----------------------------------------------------------------------
+
+Vue和React的区别：
+主要区别：
+模板 vs JSX
+状态管理 vs 对象属性
+construtor() //创建组件
+componentWillMount() //组件挂载之前
+componentDidMount() // 组件挂载之后
+componentWillReceiveProps() // 父组件发生render的时候子组件调用该函数
+shouldComponentUpdate() // 组件挂载之后每次调用setState后都会调用该函数判断是否需要重新渲染组件，默认返回true
+componentDidUpdate() // 更新
+render() //渲染，react中的核心函数
+componentWillUnmount() //组件被卸载的时候调用，一般在componentDidMount注册的事件需要在这里删除
+
+
+相似之处：
+组件化，双向数据绑定
+构建工具
+react没有数据双向绑定，单向流

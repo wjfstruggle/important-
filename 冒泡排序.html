@@ -9,7 +9,7 @@
 <body>
 	<script>
 		var result = [];
-		function sort(elements) {
+		let sort = (elements => {
 			for (let i = 0; i < elements.length - 1; i ++) {
 				for (let j = 0; j < elements.length - i - 1; j++) {
 					if (elements[j] > elements[j + 1]) {
@@ -20,7 +20,7 @@
 				}
 			}
 			return result
-		}
+		}) 
 		var elements = [12,5,4,6,45,32,45,24,16,18,15];
 		console.log('排序前:' + elements)
 		sort(elements)
