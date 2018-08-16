@@ -141,6 +141,7 @@ GET·½Ê½ÐèÒªÊ¹ÓÃRequest.QueryStringÀ´»ñÈ¡±äÁ¿µÄÖµ£¬¶øPOST·½Ê½Í¨¹ýR¶îquest.FormÀ´»
 FalshÊÊºÏ´¦Àí¶àÃ½Ìå£¬Ê¸Á¿Í¼ÐÎ¡¢·ÃÎÊ»úÆ÷£»¶Ôcss¡¢´¦ÀíÎÄ±¾ÉÏ²»×ã£¬²»ÈÝÒ×±»ËÑË÷¡£
 Ajax¶Ôcss¡¢ÎÄ±¾Ö§³ÖºÜºÃ¡¢Ö§³ÖËÑË÷£»¶àÃ½Ìå¡¢Ê¸Á¿Í¼ÐÎ¡¢»úÆ÷·ÃÎÊ²»×ã¡£
 ¹²Í¬µã£ºÓë·þÎñÆ÷µÄÎÞË¢ÐÂ´«µÝÏûÏ¢¡¢ÓÃ»§ÀëÏßºÍÔÚÏß×´Ì¬£¬²Ù×÷DOM
+------------------------------------------------------------
 36¡¢ajax¹ý³Ì
 1¡¢´´½¨XMLHttpRequest¶ÔÏó£¬Ò²¾ÍÊÇ´´½¨Ò»¸öÒì²½µ÷ÓÃ¶ÔÏó¡£
 2¡¢´´½¨Ò»¸öÐÂµÄHTTPÇëÇó£¬²¢Ö¸ÏëÏò¸ÃHTTPÇëÇóµÄ·½·¨¡¢URL¼°ÑéÖ¤ÐÅÏ¢¡£
@@ -148,6 +149,7 @@ Ajax¶Ôcss¡¢ÎÄ±¾Ö§³ÖºÜºÃ¡¢Ö§³ÖËÑË÷£»¶àÃ½Ìå¡¢Ê¸Á¿Í¼ÐÎ¡¢»úÆ÷·ÃÎÊ²»×ã¡£
 4¡¢·¢ËÍHTTPÇëÇó¡£
 5¡¢»ñÈ¡Òì²½µ÷ÓÃ·µ»ØµÄÊý¾Ý¡£
 6¡¢Ê¹ÓÃJavaScriptºÍDOMÊµÏÖ¾Ö²¿Ë¢ÐÂ¡£
+------------------------------------------------------------
 jsÑÓ³Ù¼ÓÔØµÄ·½Ê½ÓÐÄÄÐ©£¿
 deferºÍasync£¬¶¯Ì¬´´½¨DOM·½Ê½£¨ÓÃµÃ×î¶à£©£¬°´ÐèÒì²½ÔØÈëjs
 ÈçºÎ½â¾ö¿çÔ½ÎÊÌâ£¿
@@ -636,3 +638,52 @@ reactÃ»ÓÐÊý¾ÝË«Ïò°ó¶¨£¬µ¥ÏòÁ÷
 cssºÐ×ÓÄ£ÐÍ£º
 1¡¢±ê×¼ºÐ×ÓÄ£ÐÍ£º±ê×¼µÄw3cºÐ×ÓÄ£ÐÍ·¶Î§°üÀ¨margin£¬padding£¬content£¬border£¬²¢ÇÒcontent²¿·Ö²»°üº¬ÆäËû²¿·Ö
 2¡¢IEºÐ×ÓÄ£ÐÍ£º °üÀ¨margin£¬padding£¬content£¬border£¬£¬ºÍw3c²»Í¬µÄÊÇ£¬content²¿·Ö°üÀ¨ÁËborderºÍpadding
+
+-----------------------------------------------------------------------
+¿çÓò¼¼Êõ£º
+1¡¢Í¨¹ýjsonp¿çÓò
+2¡¢Í¨¹ýÐÞ¸Ädocument.domainÀ´¿çÓò
+3¡¢window.name
+4¡¢Ê¹ÓÃwindow.posstMessage¿çÓò´«ËÍÊý¾Ý
+
+-----------------------------------------------------------------------
+jsÖÐµÄ¶ÔÏó
+ 
+¡¡¡¡Ì¸µ½¶ÔÏóµÄ¿ËÂ¡£¬±Ø¶¨ÒªËµÒ»ÏÂ¶ÔÏóµÄ¸ÅÄî¡£
+ 
+¡¡¡¡jsÖÐµÄÊý¾ÝÀàÐÍ·ÖÎªÁ½´óÀà£ºÔ­Ê¼ÀàÐÍºÍ¶ÔÏóÀàÐÍ¡£
+¡¡¡¡¡¡¡¡£¨1£©Ô­Ê¼ÀàÐÍ°üÀ¨£ºÊýÖµ¡¢×Ö·û´®¡¢²¼¶ûÖµ¡¢null¡¢undefined£¨ºóÁ½¸öÊÇÌØÊâµÄÔ­Ê¼Öµ£¬ÕâÀï²»×öÏêÏ¸µÄËµÃ÷£¬ÎÒµÄÉÏÒ»Æª²©¿ÍÓÐÌ¸µ½¹ýÒ»Ð©£©
+¡¡¡¡¡¡¡¡£¨2£©¶ÔÏóÀàÐÍ°üÀ¨£º¶ÔÏó¼´ÊÇÊôÐÔµÄ¼¯ºÏ£¬µ±È»ÕâÀïÓÖÁ½¸öÌØÊâµÄ¶ÔÏó----º¯Êý£¨jsÖÐµÄÒ»µÈ¶ÔÏó£©¡¢Êý×é£¨¼üÖµµÄÓÐÐò¼¯ºÏ£©¡£
+ 
+¡¡¡¡ºÃÁË¼ÈÈ»¶ÔÏó·ÖÎªÕâÁ½Àà£¬ÕâÁ½ÖÖÀàÐÍÔÚ¸´ÖÆ¿ËÂ¡µÄÊ±ºòÊÇÓÐºÜ´óÇø±ðµÄ¡£Ô­Ê¼ÀàÐÍ´æ´¢µÄÊÇ¶ÔÏóµÄÊµ¼ÊÊý¾Ý£¬¶ø¶ÔÏóÀàÐÍ´æ´¢µÄÊÇ¶ÔÏóµÄÒýÓÃµØÖ·£¨¶ÔÏóµÄÊµ¼ÊÄÚÈÝµ¥¶À´æ·Å£¬ÎªÁË¼õÉÙÊý¾Ý¿ªÏúÍ¨³£´æ·ÅÔÚÄÚ´æÖÐ£©¡£ps£ºËµµ½ÕâÀï£¬´ó¼ÒÒªÖªµÀ£¬¶ÔÏóµÄÔ­ÐÍÒ²ÊÇÒýÓÃ¶ÔÏó£¬Ëü°ÑÔ­ÐÍµÄ·½·¨ºÍÊôÐÔ·ÅÔÚÄÚ´æµ±ÖÐ£¬Í¨¹ýÔ­ÐÍÁ´µÄ·½Ê½À´Ö¸ÏòÕâ¸öÄÚ´æµØÖ·¡£
+ 
+¶þ¡¢¿ËÂ¡µÄ¸ÅÄî
+ 
+¡¡¡¡Ç³¶È¿ËÂ¡£ºÔ­Ê¼ÀàÐÍÎªÖµ´«µÝ£¬¶ÔÏóÀàÐÍÈÔÎªÒýÓÃ´«µÝ¡£
+ 
+¡¡¡¡Éî¶È¿ËÂ¡£ºËùÓÐÔªËØ»òÊôÐÔ¾ùÍêÈ«¸´ÖÆ£¬ÓëÔ­¶ÔÏóÍêÈ«ÍÑÀë£¬Ò²¾ÍÊÇËµËùÓÐ¶ÔÓÚÐÂ¶ÔÏóµÄÐÞ¸Ä¶¼²»»á·´Ó³µ½Ô­¶ÔÏóÖÐ¡£
+ 
+Èý¡¢Ç³¿ËÂ¡µÄ±íÏÖ
+ 
+1£¬Ô­Ê¼ÀàÐÍ
+ 
+¡¡¡¡¿´ÏÂÃæÒ»¶Î´úÂë£º
+//ÊýÖµ¿ËÂ¡µÄ±íÏÖ
+var a="1";
+var b=a;
+b="2";
+console.log(a);// "1"
+console.log(b);// "2"
+//×Ö·û´®¿ËÂ¡µÄ±íÏÖ
+var c="1";
+var d=c;
+d="2";
+console.log(c);// "1"
+console.log(d);// "2"
+//×Ö·û´®¿ËÂ¡µÄ±íÏÖ
+var x=true;
+var y=x;
+y=false;
+console.log(x);// true
+console.log(y);// false
+´ÓÉÏÃæµÄ´úÂë´ó¼Ò¿ÉÒÔ¿´³ö£¬Ô­Ê¼ÀàÐÍ¼´Ê¹ÎÒÃÇ²ÉÓÃÆÕÍ¨µÄ¿ËÂ¡·½Ê½ÈÔÄÜµÃµ½ÕýÈ·µÄ½á¹û£¬Ô­Òò¾ÍÊÇÔ­Ê¼ÀàÐÍ´æ´¢µÄÊÇ¶ÔÏóµÄÊµ¼ÊÊý¾Ý¡£

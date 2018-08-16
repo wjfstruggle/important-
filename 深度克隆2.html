@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+	<script> 
+    	function deepClone (obj){
+		  let obj1;
+		  obj1=returnType(obj);
+		  if(typeof obj1 !== 'object'){
+		    return obj1
+		  }
+		  for(var i in obj){
+		    if(typeof obj[i] !=='object'){
+		      obj1[i]=obj[i];
+		    }else{
+		      obj1[i]=deepClone(obj[i])
+		    }
+		  }
+		  return obj1;
+		}
+		let a = deepClone(returnType)
+		console.log(a)
+
+		function returnType(obj){
+		  if(typeof obj !=='object') {
+		    return obj
+		  }else if(obj instanceof Array) {
+		    return [];
+		  }else {
+		    return {}
+		  }
+		}
+	</script>
+</body>
+</html>

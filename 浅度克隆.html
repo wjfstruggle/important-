@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+	<script> 
+    	var oPerson={
+		    oName:"rookiebob",
+		    oAge:"18",
+		    oAddress:{
+		        province:"beijing"
+		    },    
+		    ofavorite:[
+		        "swimming",
+		        {reading:"history book"}
+		    ],
+		    skill:function(){
+		        console.log("bob is coding");
+		    }
+};
+    function clone(obj) {
+    	let result = []
+    	for (key in obj) {
+    		result[key] = obj[key]
+    	}
+    	return result;
+    }
+    var newO = clone(oPerson)
+    console.log(newO)
+	</script>
+</body>
+</html>
