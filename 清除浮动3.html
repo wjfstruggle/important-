@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.box {
+			background-color: gray;
+  			border: solid 1px black;
+		}
+		.claerfix:after {
+			display: block;
+			clear: both;
+			content: '';
+			height: 0;
+		}
+		.claerfix {
+			zoom: 1;
+		}
+		.wrap {
+			width: 100px;
+			height: 100px;
+			background: red;
+			float: left;
+		}
+		p {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="box claerfix">
+		<div class="wrap">
+		</div>
+		<p>111111111111111</p>
+		<!-- 结合 :after 伪元素（注意这不是伪类，而是伪元素，代表一个元素之后最近的元素）和 IEhack ，可以完美兼容当前主流的各大浏览器，这里的 IEhack 指的是触发 hasLayout。
+
+		给浮动元素的容器添加一个clearfix的class，然后给这个class添加一个:after伪元素实现元素末尾添加一个看不见的块元素（Block element）清理浮动。
+ -->
+		<div class="clear">
+			
+		</div>
+	</div>
+</body>
+</html>

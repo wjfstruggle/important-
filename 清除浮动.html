@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+	/*
+	什么是CSS清除浮动？
+
+在非IE浏览器（如Firefox）下，当容器的高度为auto，且容器的内容中有浮动（float为left或right）的元素，在这种情况下，容器的高度不能自动伸长以适应内容的高度，使得内容溢出到容器外面而影响（甚至破坏）布局的现象。这个现象叫浮动溢出，为了防止这个现象的出现而进行的CSS处理，就叫CSS清除浮动。
+
+引用W3C的例子，news容器没有包围浮动的元素。
+	 */
+		.box {
+			background-color: gray;
+  			border: solid 1px black;
+		}
+		.wrap {
+			width: 100px;
+			height: 100px;
+			background: red;
+			float: left;
+		}
+		p {
+			float: right;
+		}
+		.clear {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="wrap">
+		</div>
+		<p>111111111111111</p>
+		<!-- 在浮动元素后使用一个空元素如<div class="clear"></div>，并在CSS中赋予.clear{clear:both;}属性即可清理浮动。亦可使用<br class="clear" />或<hr class="clear" />来进行清理。 
+		优点：简单，代码少，浏览器兼容性好。
+		缺点：需要添加大量无语义的html元素，代码不够优雅，后期不容易维护。
+ -->
+		<div class="clear">
+			
+		</div>
+	</div>
+</body>
+</html>
