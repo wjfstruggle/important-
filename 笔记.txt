@@ -633,3 +633,6 @@ componentWillUnmount() //组件被卸载的时候调用，一般在componentDidMount注册的事件
 react没有数据双向绑定，单向流
 
 -----------------------------------------------------------------------
+css盒子模型：
+1、标准盒子模型：标准的w3c盒子模型范围包括margin，padding，content，border，并且content部分不包含其他部分
+2、IE盒子模型： 包括margin，padding，content，border，，和w3c不同的是，content部分包括了border和padding
